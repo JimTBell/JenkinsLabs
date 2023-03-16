@@ -8,17 +8,17 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh "pwd"
+                sh "Build.sh"
             }
         }
         stage('Test') {
             steps {
-                sh "ls"
+                sh "Test.sh"
             }
         }
         stage('Deploy') {
             steps {
-                sh "ls -al"
+                sh "Deploy.sh"
                 sh "echo Well Done!"
             }
         }
