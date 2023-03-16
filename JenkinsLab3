@@ -4,6 +4,7 @@ pipeline {
         stage('Pipeline Stages') {
             steps {
                 sh "ls"
+                chmod +x *.sh
             }
         }
         stage('Build') {
@@ -13,12 +14,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh "Test.sh"
+                sh "./Test.sh"
             }
         }
         stage('Deploy') {
             steps {
-                sh "Deploy.sh"
+                sh "./Deploy.sh"
                 sh "echo Well Done!"
             }
         }
