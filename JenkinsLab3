@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    stages {
+        stage('Pipeline Stages') {
+            steps {
+                sh "ls"
+            }
+        }
+        stage('Build') {
+            steps {
+                sh "pwd"
+            }
+        }
+        stage('Test') {
+            steps {
+                sh "ls"
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh "ls -al"
+                sh "echo Well Done!"
+            }
+        }
+    }
+}
