@@ -4,7 +4,7 @@ pipeline {
         stage('Pipeline Stages') {
             steps {
                 sh "ls"
-                chmod +x *.sh
+                sh "chmod +x *.sh"
             }
         }
         stage('Build') {
